@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/import.dist.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Gerador de CSS</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+
+        <h1>Utilize os campos para personalizar a forma abaixo,</h1>
+        <p>e quando estiver tudo pronto clique no botão “Gerar CSS” para visualizar o seu código.</p>
+        <div class="generator">
+          
+            <div class="shape"></div>
+          
+          <div class="right-side">
+            <div class="selectors">
+              <div class="box">
+                <div class="item">
+                  <label for="backgroundColor">Cor do fundo:</label>
+                  <input type="color" name="backgroundColor" id="backgroundColor" />
+                </div>
+
+                <div class="item">
+                  <label for="borderColor">Cor da borda:</label>
+                  <input type="color" name="borderColor" id="borderColor" />
+                </div>
+              </div>
+
+              <div class="box">
+
+                <div class="item">
+                  <label for="borderWidth">Largura da borda:</label>
+                  <input class="with-placeholder" type="text" name="borderWidth" placeholder="PX, REM ou EM" id="borderWidth" />
+                </div>
+
+                <div class="item">
+                  <label for="borderRadius">Arredondamento da borda:</label>
+                  <input class="with-placeholder" type="text" name="borderRadius" placeholder="PX, REM, EM ou %" id="borderRadius" />
+                </div>
+              </div>
+            </div>
+
+            <div class="button">
+              <button onclick="showResults()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Gerar CSS</span><img src="img/icon-check.svg" alt="Gerar CSS" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="result">Seu código CSS vai aparecer aqui</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
